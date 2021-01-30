@@ -1,7 +1,7 @@
 # Big_Data
 
 # Resources
-1. Data Source: Amazon customer review datasets
+1. Data Source: Amazon customer review datasets (https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt)
 2. Software: AWS, Google Colab Notebook, PySpark, SQL
 
 # Chellenge Overview
