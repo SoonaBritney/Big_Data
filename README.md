@@ -35,13 +35,29 @@ your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 2. Deliverable 2: Determine Bias of Vine Reviews
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
-        - The analysis does the following:
-        - There is a DataFrame or table for the vine_table data using one of three methods above (5 pt)
-        - The data is filtered to create a DataFrame or table where there are 20 or more total votes (5 pt)
-        - The data is filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (5 pt)
-        - The data is filtered to create a DataFrame or table where there is a Vine review (5 pt)
-        - The data is filtered to create a DataFrame or table where there isn’t a Vine review (5 pt)
-        - The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
+    - The analysis does the following:
+    - There is a DataFrame or table for the vine_table data using one of three methods - I chose Amazon AWS
+    - The data is filtered to create a DataFrame or table where there are 20 or more total votes (5 pt) 
+    - The data is filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (5 pt)
+    - The data is filtered to create a DataFrame or table where there is a Vine review (5 pt)
+    - The data is filtered to create a DataFrame or table where there isn’t a Vine review (5 pt)
+    - The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
+
+**Summary: Determining if the Vine reviews are biased**
+
+Here is the final summary:
+
+    1) Total rows of Vine_df: 4750852
+    2) Total Reviews (vote count> 50% and total_votes > 20):105969
+    3) Total five star_counts: 67568
+    4) analyzed the five star % when vine == Y (Paid):0.6676168119830092
+    5) analyzed the five star % when vine == N (not paid): 0.631526959365101
+
+In this summary, when vine is Yes (means paid), the five star rate is slightly higher (0.6676168119830092), and seems biased.
+(0.6676168119830092 - 0.631526959365101 = 0.0360 )
+
+Although, it is possible that there could have other factors, or it is a simply coinsident, and my conclusion is it maybe be biased, but not a gerat deal and certain. Thank you! It is a greatly fun project.
+
 
 3. Deliverable 3: A Written Report on the Analysis
 For this part of the Challenge, you’ll write a report that summarizes the analysis you performed in Deliverable 2.
