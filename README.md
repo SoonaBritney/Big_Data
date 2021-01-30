@@ -35,6 +35,9 @@ your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
     - All four DataFrames are loaded into their respective tables in pgAdmin (10 pt)
 
 2. Deliverable 2: Determine Bias of Vine Reviews
+
+Vine_Review_Analysis: [Vine_Review_Analysis](https://github.com/SoonaBritney/Big_Data/blob/main/Vine_Reviews_Analysis.ipynb)
+
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
     - The analysis does the following:
