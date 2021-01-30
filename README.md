@@ -25,7 +25,8 @@ This new assignment consists of two technical analysis deliverables and a writte
 # Challenge Summary
 
 1. Deliverable 1:
-Amazon Revies_ETL: [Amazon Revies_ETL](https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb)
+
+## Amazon Revies_ETL: [Amazon Revies_ETL](https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb)
 
 your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
 
@@ -36,7 +37,7 @@ your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 
 2. Deliverable 2: Determine Bias of Vine Reviews
 
-Vine_Review_Analysis: [Vine_Review_Analysis](https://github.com/SoonaBritney/Big_Data/blob/main/Vine_Reviews_Analysis.ipynb)
+## Vine_Review_Analysis: [Vine_Review_Analysis](https://github.com/SoonaBritney/Big_Data/blob/main/Vine_Reviews_Analysis.ipynb)
 
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
