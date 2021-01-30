@@ -27,7 +27,7 @@ This new assignment consists of two technical analysis deliverables and a writte
 1. Deliverable 1:
 your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
 
-- The Amazon_Reviews_ETL.ipynb file does the following:
+    - The Amazon_Reviews_ETL.ipynb file does the following:
     - An Amazon Review dataset is extracted as a DataFrame (10 pt)
     - The extracted dataset is transformed into four DataFrames with the correct columns (20 pt)
     - All four DataFrames are loaded into their respective tables in pgAdmin (10 pt)
@@ -35,7 +35,7 @@ your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 2. Deliverable 2: Determine Bias of Vine Reviews
 Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
-- The analysis does the following:
+        - The analysis does the following:
         - There is a DataFrame or table for the vine_table data using one of three methods above (5 pt)
         - The data is filtered to create a DataFrame or table where there are 20 or more total votes (5 pt)
         - The data is filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (5 pt)
