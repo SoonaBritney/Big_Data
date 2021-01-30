@@ -64,6 +64,7 @@ In this summary, when vine is Yes (means paid), the five star rate is slightly h
 
 Although, it is possible that there could have other factors, or it is a simply coinsident, and my conclusion is it maybe be biased, but not a gerat deal and certain. Thank you! It is a greatly fun project.
 
+## Vine Review Analtsis: ![Vine Review Analtsis](https://github.com/SoonaBritney/Big_Data/blob/main/vine_analysis.JPG)
 
 3. Deliverable 3: A Written Report on the Analysis
 For this part of the Challenge, you’ll write a report that summarizes the analysis you performed in Deliverable 2.
