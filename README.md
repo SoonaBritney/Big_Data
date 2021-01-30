@@ -4,6 +4,12 @@
 1. Data Source: Amazon customer review datasets (https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt)
 2. Software: AWS, Google Colab Notebook, PySpark, SQL
 
+# ETL Process
+- Extract the dataset from the S3 bucket and load into a DataFrame.
+- Count the number of records (rows) in the dataset.
+- Transform the dataset to fit the tables in the schema file.
+- Load the DataFrames that correspond to tables into an RDS instance.
+
 # Chellenge Overview
 Since your work with Jennifer on the SellBy project was so successful, you’ve been tasked with another, larger project: analyzing Amazon reviews written by members of the paid Amazon Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review.
 
