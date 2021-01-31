@@ -34,6 +34,11 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 - Amazon AWS can be set up here: https://aws.amazon.com/console/  (RDS for Database Setup, S3 for Storage) 
 - pgAdmin4: We connect the AWS database here to do our development: http://127.0.0.1:53838/browser/
 - Google Drive to install Google Colaboraty: https://drive.google.com/drive/my-drive
+- Using the Google Drive pyspark packaeg,
+    - Extract the dataset from the S3 bucket and load into a DataFrame.
+    - Count the number of records (rows) in the dataset.
+Transform the dataset to fit the tables in the schema file.
+Load the DataFrames that correspond to tables into an RDS instance.
 
 #### Deliverable 1 Content: ETL Process
 
@@ -82,13 +87,18 @@ For this analysis, I will determine if having a paid Vine review makes a differe
     - (Step 5) The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
     
     - ![calculation] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_calculations.JPG)
+
+
+## Vine Review Analtsis: ![Vine Review Analtsis](https://github.com/SoonaBritney/Big_Data/blob/main/vine_analysis.JPG)    
     
-    
-**Summary: Determining if the Vine reviews are biased**
+
+# Deliverable 3: A Written Report on the Analysis
+
+## Summary: Determining if the Vine reviews are biased
 
 Here is the final summary:
 
-    1) Total rows of Vine_df: 4750852
+    1) In the vine table, the rows of Vine_df: 4750852
     2) Total Reviews (vote count> 50% and total_votes > 20):105969
     3) Total five star_counts: 67568
     4) analyzed the five star % when vine == Y (Paid):0.6676168119830092
@@ -99,18 +109,21 @@ In this summary, when vine is Yes (means paid), the five star rate is slightly h
 
 Although, it is possible that there could have other factors, or it is a simply coinsident, and my conclusion is it maybe be biased, but not a gerat deal and certain. Thank you! It is a greatly fun project.
 
-## Vine Review Analtsis: ![Vine Review Analtsis](https://github.com/SoonaBritney/Big_Data/blob/main/vine_analysis.JPG)
 
 
-# Deliverable 3: A Written Report on the Analysis
 
- The report should contain the following:
+
+
+The report should contain the following:
         - Overview of the analysis: Explain the purpose of this analysis.
         - Results: Using bulleted lists and images of DataFrames as support, address the following questions:
             + How many Vine reviews and non-Vine reviews were there?
             + How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
             + What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+
+
+## Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
             
-        - Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+        
         
         
