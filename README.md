@@ -56,7 +56,7 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
         - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
     - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
         ![RDS upload](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_to_RDS.JPG)
-        -![RDS UPLAOD SUCCESS] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_success.JPG)
+    - Great Success! All the 4 tables were populted as planned.    
     
 
 ### AMAZON REVIEW ETL CODE: https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb
@@ -66,15 +66,20 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 
 ## Vine_Review_Analysis: [Vine_Review_Analysis](https://github.com/SoonaBritney/Big_Data/blob/main/Vine_Reviews_Analysis.ipynb)
 
-Using your knowledge of PySpark, Pandas, or SQL, you’ll determine if there is any bias towards reviews that were written as part of the Vine program. For this analysis, you'll determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
+Using our knowledge of PySpark, Pandas, or SQL, we determine if there is any bias towards reviews that were written as part of the Vine program. 
+For this analysis, I will determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
-    - The analysis does the following:
-    - There is a DataFrame or table for the vine_table data using one of three methods - I chose Amazon AWS
-    - The data is filtered to create a DataFrame or table where there are 20 or more total votes (5 pt) 
-    - The data is filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (5 pt)
-    - The data is filtered to create a DataFrame or table where there is a Vine review (5 pt)
-    - The data is filtered to create a DataFrame or table where there isn’t a Vine review (5 pt)
-    - The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
+    - In my analysis:
+    - There is a DataFrame or table for the vine_table data using one of three methods: I connected to Amazon AWS RDS database via Goodle Corlaboratu pyspark package, and then I reviwed with pgAdmin SQL Suery as well to ensure the accuracy. 
+    - The data is filtered to create a DataFrame or table where there are 20 or more total votes 
+    - In vine_table: 
+        - Before filtering, there were 4,750,852 records, 
+    - (Step 1) filtered with a condition of (total_votes >= 20), which means reviewes who votes aften (more than or equal to 20 times)    
+    - (Step 2) filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (vote_counte["helpful_votes"]/vote_count["total_votes"]>0.5). It means we are targeting the reviwes, who has tendency of postive review ratings   
+        - After Step 1 and 2, we created the dataframe, "new_table", which consists only 105,069 record.
+    - (Step 3) the data filtered to create a DataFrame or table where there is a Vine review (vine == "Y")
+    - (Step 4) The data is filtered to create a DataFrame where there isn’t a Vine review (vine == "N")
+    - (Step 5) The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
 
 **Summary: Determining if the Vine reviews are biased**
 
@@ -93,10 +98,10 @@ Although, it is possible that there could have other factors, or it is a simply 
 
 ## Vine Review Analtsis: ![Vine Review Analtsis](https://github.com/SoonaBritney/Big_Data/blob/main/vine_analysis.JPG)
 
-# Deliverable 3: A Written Report on the Analysis
-For this part of the Challenge, you’ll write a report that summarizes the analysis you performed in Deliverable 2.
 
-- The report should contain the following:
+# Deliverable 3: A Written Report on the Analysis
+
+ The report should contain the following:
         - Overview of the analysis: Explain the purpose of this analysis.
         - Results: Using bulleted lists and images of DataFrames as support, address the following questions:
             + How many Vine reviews and non-Vine reviews were there?
