@@ -56,7 +56,7 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
         - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
     - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
         ![RDS upload](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_to_RDS.JPG)
-        ![RDS UPLAOD SUCCESS] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_success.JPG)
+        -![RDS UPLAOD SUCCESS] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_success.JPG)
     
 
 ### AMAZON REVIEW ETL CODE: https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb
