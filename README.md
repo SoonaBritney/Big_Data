@@ -80,7 +80,10 @@ For this analysis, I will determine if having a paid Vine review makes a differe
     - (Step 3) the data filtered to create a DataFrame or table where there is a Vine review (vine == "Y")
     - (Step 4) The data is filtered to create a DataFrame where there isn’t a Vine review (vine == "N")
     - (Step 5) The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
-
+    
+    - ![calculation] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_calculations.JPG)
+    
+    
 **Summary: Determining if the Vine reviews are biased**
 
 Here is the final summary:
