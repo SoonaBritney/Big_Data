@@ -34,11 +34,11 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 - Amazon AWS can be set up here: https://aws.amazon.com/console/  (RDS for Database Setup, S3 for Storage) 
 - pgAdmin4: We connect the AWS database here to do our development: http://127.0.0.1:53838/browser/
 - Google Drive to install Google Colaboraty: https://drive.google.com/drive/my-drive
-- Using the Google Drive pyspark packaeg,
+- Using the Google Drive pyspark package,
     - Extract the dataset from the S3 bucket and load into a DataFrame.
     - Count the number of records (rows) in the dataset.
-Transform the dataset to fit the tables in the schema file.
-Load the DataFrames that correspond to tables into an RDS instance.
+    - Transform the dataset to fit the tables in the schema file.
+    - Load the DataFrames that correspond to tables into an RDS instance.
 
 #### Deliverable 1 Content: ETL Process
 
