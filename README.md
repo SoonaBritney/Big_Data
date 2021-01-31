@@ -35,7 +35,7 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 - pgAdmin4: We connect the AWS database here to do our development: http://127.0.0.1:53838/browser/
 - Google Drive to install Google Colaboraty: https://drive.google.com/drive/my-drive
 
-#### Deliverable 1 Content: 
+#### Deliverable 1 Content: ETL Process
 
 - The Amazon_Reviews_ETL.ipynb file does the following: 
     - An Amazon Review dataset is extracted as a DataFrame: 
@@ -48,11 +48,18 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
         - Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
         
         ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
-        - Database tables schema - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
-    - The extracted dataset is transformed into four DataFrames with the correct columns
-    - All four DataFrames are loaded into their respective tables in pgAdmin
+        
+        - Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
+    
+    - Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
+        - extracted dataset is transformed into four DataFrames with the correct columns: (customes_df, product_df, review_id_df, and vine_df.)
+        - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
+    - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
+        ![RDS upload](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_to_RDS.JPG) 
+        ![RDS UPLAOD SUCCESS] (https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_success.JPG)
+    
 
-### AMAZON REVIEW ETL (attached): https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb
+### AMAZON REVIEW ETL CODE: https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb
 
 
 # 2. Deliverable 2: Determine Bias of Vine Reviews
