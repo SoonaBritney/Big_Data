@@ -2,7 +2,7 @@
 
 # Resources
 1. Data Source: Amazon customer review datasets (https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt), and I picked the music data. (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
-2. Software: AWS, Google Colab Notebook, PySpark, SQL
+2. Software: Amazon AWS, Google Colab Notebook, PySpark, SQL (pgAdmin4)
 
 # ETL Process
 - Extract the dataset from the S3 bucket and load into a DataFrame.
@@ -24,18 +24,24 @@ This new assignment consists of two technical analysis deliverables and a writte
 
 # Challenge Summary
 
-1. Deliverable 1:
+# 1. Deliverable 1:
 
 ## Amazon Revies_ETL: [Amazon Revies_ETL](https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb)
 
-your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
+Your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
 
+### How to Set Up Systems:
+- Amazon AWS can be set up here: https://aws.amazon.com/console/  (RDS for Database Setup, S3 for Storage) 
+- pgAdmin4: We connect the AWS database here to do our development: http://127.0.0.1:53838/browser/
+- Google Drive to install Google Colaboraty: https://drive.google.com/drive/my-drive
+
+#### Deliverable 1 Content: 
     - The Amazon_Reviews_ETL.ipynb file does the following:
     - An Amazon Review dataset is extracted as a DataFrame (10 pt)
     - The extracted dataset is transformed into four DataFrames with the correct columns (20 pt)
     - All four DataFrames are loaded into their respective tables in pgAdmin (10 pt)
 
-2. Deliverable 2: Determine Bias of Vine Reviews
+# 2. Deliverable 2: Determine Bias of Vine Reviews
 
 ## Vine_Review_Analysis: [Vine_Review_Analysis](https://github.com/SoonaBritney/Big_Data/blob/main/Vine_Reviews_Analysis.ipynb)
 
@@ -66,7 +72,7 @@ Although, it is possible that there could have other factors, or it is a simply 
 
 ## Vine Review Analtsis: ![Vine Review Analtsis](https://github.com/SoonaBritney/Big_Data/blob/main/vine_analysis.JPG)
 
-3. Deliverable 3: A Written Report on the Analysis
+# Deliverable 3: A Written Report on the Analysis
 For this part of the Challenge, you’ll write a report that summarizes the analysis you performed in Deliverable 2.
 
 - The report should contain the following:
