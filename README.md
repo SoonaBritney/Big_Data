@@ -36,14 +36,18 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 - Google Drive to install Google Colaboraty: https://drive.google.com/drive/my-drive
 
 #### Deliverable 1 Content: 
-    - The Amazon_Reviews_ETL.ipynb file does the following:
+
+- The Amazon_Reviews_ETL.ipynb file does the following: 
     - An Amazon Review dataset is extracted as a DataFrame: 
         - I chose music data (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
         - It was uploaded into my Amzon RDS
-        - ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
-        - ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
+         ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
+         
+         ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
+        
         - Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
-        - ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
+        
+        ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
         - Database tables schema - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
     - The extracted dataset is transformed into four DataFrames with the correct columns
     - All four DataFrames are loaded into their respective tables in pgAdmin
