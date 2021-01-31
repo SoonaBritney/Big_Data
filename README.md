@@ -42,21 +42,21 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 
 #### Deliverable 1 Content: ETL Process
 
-- The Amazon_Reviews_ETL.ipynb file does the following: 
+The Amazon_Reviews_ETL.ipynb file, i did the following: 
     - An Amazon Review dataset is extracted as a DataFrame: 
-        - I chose music data (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
+    1) I chose music data (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
         - It was uploaded into my Amzon RDS
          ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
          
          ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
         
-        - Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
+    2) Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
         
         ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
         
-        - Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
+    3) Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
     
-    - Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
+    4) Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
         - extracted dataset is transformed into four DataFrames with the correct columns: (customes_df, product_df, review_id_df, and vine_df.)
         - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
     - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
