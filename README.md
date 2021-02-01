@@ -44,25 +44,27 @@ Your knowledge of the cloud ETL process, you’ll create an AWS RDS database wit
 
 The Amazon_Reviews_ETL.ipynb file, i did the following: 
     - An Amazon Review dataset is extracted as a DataFrame: 
-    1) I chose music data (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
-        - It was uploaded into my Amzon RDS
-         ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
-         
-         ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
-    2) Cleaning the no record rows
-          ![drop na](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_dropna.JPG)
-    3) Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
+1) I chose music data (https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Music_v1_00.tsv.gz)
+- It was uploaded into my Amzon RDS
+- ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
+
+- ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
+
+2) Cleaning the no record rows
+- ![drop na](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_dropna.JPG)
+
+3) Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
         
-        ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
+![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
         
-    4) Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
+4) Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
     
-    5) Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
-        - extracted dataset is transformed into four DataFrames with the correct columns: (customes_df, product_df, review_id_df, and vine_df.)
-        - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
-    - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
+5) Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
+   - extracted dataset is transformed into four DataFrames with the correct columns: (customes_df, product_df, review_id_df, and vine_df.)
+   - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
+   - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
         ![RDS upload](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_upload_to_RDS.JPG)
-    - Great Success! All the 4 tables were populted as planned.    
+   - Great Success! All the 4 tables were populted as planned.    
     
 
 ### AMAZON REVIEW ETL CODE: https://github.com/SoonaBritney/Big_Data/blob/main/Amazon_Reviews_ETL.ipynb
@@ -75,14 +77,14 @@ The Amazon_Reviews_ETL.ipynb file, i did the following:
 Using our knowledge of PySpark, Pandas, or SQL, we determine if there is any bias towards reviews that were written as part of the Vine program. 
 For this analysis, I will determine if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
-    - In my analysis:
-    - There is a DataFrame or table for the vine_table data using one of three methods: I connected to Amazon AWS RDS database via Goodle Corlaboratu pyspark package, and then I reviwed with pgAdmin SQL Suery as well to ensure the accuracy. 
-    - The data is filtered to create a DataFrame or table where there are 20 or more total votes 
-    - In vine_table: 
-        - Before filtering, there were 4,750,852 records, 
+- In my analysis:
+- There is a DataFrame or table for the vine_table data using one of three methods: I connected to Amazon AWS RDS database via Goodle Corlaboratu pyspark package, and then I reviwed with pgAdmin SQL Suery as well to ensure the accuracy. 
+- The data is filtered to create a DataFrame or table where there are 20 or more total votes 
+- In vine_table: 
+- Before filtering, there were 4,750,852 records, 
     - (Step 1) filtered with a condition of (total_votes >= 20), which means reviewes who votes aften (more than or equal to 20 times)    
     - (Step 2) filtered to create a DataFrame or table where the percentage of helpful_votes is equal to or greater than 50% (vote_counte["helpful_votes"]/vote_count["total_votes"]>0.5). It means we are targeting the reviwes, who has tendency of postive review ratings   
-        - After Step 1 and 2, we created the dataframe, "new_table", which consists only 105,069 record.
+    - After Step 1 and 2, we created the dataframe, "new_table", which consists only 105,069 record.
     - (Step 3) the data filtered to create a DataFrame or table where there is a Vine review (vine == "Y")
     - (Step 4) The data is filtered to create a DataFrame where there isn’t a Vine review (vine == "N")
     - (Step 5) The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine and non-Vine reviews (15 pt)
@@ -103,19 +105,19 @@ For this analysis, I will determine if having a paid Vine review makes a differe
 
 Here is the final summary:
 
-    1) In the vine_df, the total number of record without any filterding after dropna: 4,750,852  
-    2) In the vine_df, the number of record of ("total_votes > 20") is:105,969
-     - In the vine_df ("total_votes > 20"), the total number of vine= Y: 7
-     - In the vine_df ("total_votes > 20"), the total number of vine= N: 105,962 
-     - In the vine_df ("total_votes > 20"), the total number of star_rating=5: 67,589
+1) In the vine_df, the total number of record without any filterding after dropna: 4,750,852  
+2) In the vine_df, the number of record of ("total_votes > 20") is:105,969
+- In the vine_df ("total_votes > 20"), the total number of vine= Y: 7
+- In the vine_df ("total_votes > 20"), the total number of vine= N: 105,962 
+- In the vine_df ("total_votes > 20"), the total number of star_rating=5: 67,589
     
-    3) In the vine_df, we filtered and ctreated a new_vine_df ("WHERE CAST(helpful_votes AS FLOAT)/CAST(total_votes AS FLOAT) >=0.5" and "total_votes > 20")
-     -  the total number of record is: 19,185
-     -  the total number of record where vine='Y' : 0
-     -  the total number of record where vine='N' : 19,185
+3) In the vine_df, we filtered and ctreated a new_vine_df ("WHERE CAST(helpful_votes AS FLOAT)/CAST(total_votes AS FLOAT) >=0.5" and "total_votes > 20")
+-  the total number of record is: 19,185
+-  the total number of record where vine='Y' : 0
+-  the total number of record where vine='N' : 19,185
     
-    4) analyzed the five star % when vine == Y (Paid Review):0.6676168119830092
-    5) analyzed the five star % when vine == N (not Paid Review): 0.631526959365101
+4) analyzed the five star % when vine == Y (Paid Review):0.6676168119830092
+5) analyzed the five star % when vine == N (not Paid Review): 0.631526959365101
 
 In this summary, when vine is Yes (means paid), the five star rate is slightly higher (0.6676168119830092), and seems about 3% biased.
 (0.6676168119830092 - 0.631526959365101 = 0.0360 )
