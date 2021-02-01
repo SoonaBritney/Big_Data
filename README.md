@@ -49,14 +49,15 @@ The Amazon_Reviews_ETL.ipynb file, i did the following:
          ![AMAZON RDS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_rds.JPG)
          
          ![AMAZON AWS](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_amazon_S3.JPG)
-        
-    2) Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
+    2) Cleaning the no record rows
+          ![drop na](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_dropna.JPG)
+    3) Now, it was connected to pgAdmin SQL editor, the AWS Database is visible, and created tables per schema:
         
         ![pgAdmin](https://github.com/SoonaBritney/Big_Data/blob/main/Capture_pgAdmin.JPG)
         
-    3) Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
+    4) Database tables schema is here: - [SQL DB Tables schema](https://github.com/SoonaBritney/Big_Data/blob/main/challenge_schema.sql) 
     
-    4) Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
+    5) Using the Google Drive Colaboratory library, we open the Amazon_Reviews_ETL:
         - extracted dataset is transformed into four DataFrames with the correct columns: (customes_df, product_df, review_id_df, and vine_df.)
         - To macth with the tablkes schema in SQL, we modified the reviee date format as datetime (from sting), and created a customer _count colum using groupby, aggregation SQL function. 
     - All four DataFrames are loaded into their respective tables in pgAdmin from Amazon_Reviews_ETL.ipynb. it is checked out that all the eows were sucesfully uploaded in RDS. 
