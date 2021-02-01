@@ -96,22 +96,30 @@ For this analysis, I will determine if having a paid Vine review makes a differe
 
 ## Summary: Determining if the Vine reviews are biased
 
+### Overview of the analysis:
+- The purpose of Summary of this analysis:
+
+
 Here is the final summary:
 
-    1) In the vine table, the rows of Vine_df: 4750852
-    2) Total Reviews (vote count> 50% and total_votes > 20):105969
-    3) Total five star_counts: 67568
-    4) analyzed the five star % when vine == Y (Paid):0.6676168119830092
-    5) analyzed the five star % when vine == N (not paid): 0.631526959365101
+    1) In the vine_df, the total number of record without any filterding after dropna: 4,750,852  
+    2) In the vine_df, the number of record of ("total_votes > 20") is:105,969
+     - In the vine_df ("total_votes > 20"), the total number of vine= Y: 7
+     - In the vine_df ("total_votes > 20"), the total number of vine= N: 105,962 
+     - In the vine_df ("total_votes > 20"), the total number of star_rating=5: 67,589
+    
+    3) In the vine_df, we filtered and ctreated a new_vine_df ("WHERE CAST(helpful_votes AS FLOAT)/CAST(total_votes AS FLOAT) >=0.5" and "total_votes > 20")
+     -  the total number of record is: 19,185
+     -  the total number of record where vine='Y' : 0
+     -  the total number of record where vine='N' : 19,185
+    
+    4) analyzed the five star % when vine == Y (Paid Review):0.6676168119830092
+    5) analyzed the five star % when vine == N (not Paid Review): 0.631526959365101
 
-In this summary, when vine is Yes (means paid), the five star rate is slightly higher (0.6676168119830092), and seems biased.
+In this summary, when vine is Yes (means paid), the five star rate is slightly higher (0.6676168119830092), and seems about 3% biased.
 (0.6676168119830092 - 0.631526959365101 = 0.0360 )
 
-Although, it is possible that there could have other factors, or it is a simply coinsident, and my conclusion is it maybe be biased, but not a gerat deal and certain. Thank you! It is a greatly fun project.
-
-
-
-
+Although, it is possible that there could have other factors, or it is a simply coinsident, and my conclusion is it maybe be biased, but not a gerat deal and perhaps not quite certain. Thank you! It is a greatly fun project.
 
 
 The report should contain the following:
